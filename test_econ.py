@@ -15,39 +15,39 @@ lp = LiquidityPool(initial_matic=10000, initial_xxx=5000)
 print_lp_status(lp)
 
 # Create players with some initial MATIC
-player1 = Player(player_id=1, name="Alice", initial_matic=500)
+player1 = Player(player_id=1, name="Nick", initial_matic=500)
 player2 = Player(player_id=2, name="Bob", initial_matic=300)
+player3 = Player(player_id=2, name="Miriam", initial_matic=1000)
 
 # Players buy XXX tokens
-player1.buy_xxx(liquidity_pool=lp, matic_amount=100)  # Alice buys XXX tokens
+player1.buy_xxx(liquidity_pool=lp, matic_amount=100)  
 print_lp_status(lp)
-player2.buy_xxx(liquidity_pool=lp, matic_amount=100)   # Bob buys XXX tokens
+player2.buy_xxx(liquidity_pool=lp, matic_amount=100)   
 print_lp_status(lp)
-
+player3.buy_xxx(liquidity_pool=lp, matic_amount=100)   
 
 # Players sell XXX tokens
-player1.sell_xxx(liquidity_pool=lp, xxx_amount=20)  # Alice sells some XXX tokens
+player1.sell_xxx(liquidity_pool=lp, xxx_amount=20)  
 print_lp_status(lp)
-player2.sell_xxx(liquidity_pool=lp, xxx_amount=10)  # Bob sells some XXX tokens
+player2.sell_xxx(liquidity_pool=lp, xxx_amount=10)  
+print_lp_status(lp)
+player3.sell_xxx(liquidity_pool=lp, xxx_amount=10)  
 print_lp_status(lp)
 
 # Players buy XXX tokens
-player1.buy_xxx(liquidity_pool=lp, matic_amount=100)  # Alice buys XXX tokens
+player1.buy_xxx(liquidity_pool=lp, matic_amount=100)  
 print_lp_status(lp)
-player2.buy_xxx(liquidity_pool=lp, matic_amount=100)   # Bob buys XXX tokens
+player2.buy_xxx(liquidity_pool=lp, matic_amount=100)   
 print_lp_status(lp)
 
 
 # Players mint NFTs
-player1.mint_nft(liquidity_pool=lp, matic_amount=100)  # Alice mints an NFT
+player1.mint_nft(liquidity_pool=lp, matic_amount=100)  
 print_lp_status(lp)
 player2.mint_nft(liquidity_pool=lp, matic_amount=50) 
 print_lp_status(lp)
 
-
-
-
 print(player1)
-
-
+print(player2)
+print(player3)
 
