@@ -4,7 +4,7 @@ from player import Player
 import sys
 
 # Open a text file to write the output
-with open('output.txt', 'w') as f:
+with open('test_econ_output.txt', 'w') as f:
     # Redirect stdout to the file
     sys.stdout = f
 

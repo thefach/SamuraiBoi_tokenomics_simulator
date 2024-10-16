@@ -1,3 +1,5 @@
+import random
+
 class Player:
     def __init__(self, player_id, name, initial_matic):
         self.player_id = player_id
@@ -5,21 +7,35 @@ class Player:
         self.matic_wallet = initial_matic  # Player's balance in MATIC
         self.xxx_wallet = 0  # Player's balance in XXX tokens
         self.nfts = 0  # Player's NFTs
-        self.time = None  # Time for the current map challenge
+        self.times_on_maps = {}  # Dictionary {map_id: [list of time_taken]}
 
     def __str__(self):
         """Define how to print a player's status."""
+        map_times = ', '.join([f"Map {mid}: {times}" for mid, times in self.times_on_maps.items()]) or 'No times recorded'
         return (f"Player {self.name}:\n"
                 f"  MATIC Wallet: {self.matic_wallet}\n"
                 f"  XXX Wallet: {self.xxx_wallet}\n"
                 f"  NFTs Owned: {self.nfts}\n"
-                f"  Challenge Time: {self.time if self.time else 'Not set'}")
+                f"  Times on Maps: {map_times}")
 
     # Game actions
-    
-    def set_time(self, time_taken):
-        """Set the time taken by the player for the challenge."""
-        self.time = time_taken
+
+    def play(self, game_map):
+        """Play on the map by paying 1 XXX token and setting a random time."""
+        if self.xxx_wallet >= 1:
+            self.update_wallet('XXX', -1)  # Deduct 1 XXX token from player's wallet
+            time_taken = random.randint(0, 300)  # Random time between 0 and 300 seconds
+            
+            # Store the time for this map, create a list if it's the player's first time on the map
+            if game_map.map_id not in self.times_on_maps:
+                self.times_on_maps[game_map.map_id] = []
+            self.times_on_maps[game_map.map_id].append(time_taken)  # Add the new time
+
+            game_map.update_player_time(self, time_taken)  # Update the map with the player's time
+            game_map.add_xxx_to_pool(1)  # Add the 1 XXX to the map's pool
+            print(f"{self.name} played on Map {game_map.map_id} and took {time_taken} seconds.")
+        else:
+            print(f"{self.name} does not have enough XXX tokens to play on Map {game_map.map_id}.")
 
     # Economic actions
 

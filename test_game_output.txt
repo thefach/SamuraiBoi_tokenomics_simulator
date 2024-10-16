@@ -1,0 +1,41 @@
+Alice completed Map 1 in 262 seconds.
+New overall best time on Map 1: 262 seconds by Alice.
+Map 1 now has 1 XXX tokens in the pool.
+Alice played on Map 1 and took 262 seconds.
+ 
+Bob completed Map 1 in 85 seconds.
+New overall best time on Map 1: 85 seconds by Bob.
+Map 1 now has 2 XXX tokens in the pool.
+Bob played on Map 1 and took 85 seconds.
+ 
+Alice completed Map 1 in 146 seconds.
+Map 1 now has 3 XXX tokens in the pool.
+Alice played on Map 1 and took 146 seconds.
+ 
+Map 1 now has 4 XXX tokens in the pool.
+Alice played on Map 1 and took 236 seconds.
+ 
+Bob completed Map 1 in 11 seconds.
+New overall best time on Map 1: 11 seconds by Bob.
+Map 1 now has 5 XXX tokens in the pool.
+Bob played on Map 1 and took 11 seconds.
+ 
+Map 1 now has 6 XXX tokens in the pool.
+Alice played on Map 1 and took 223 seconds.
+ 
+Map 1:
+  Difficulty: Medium
+  Player Times: Player 1: 146, Player 2: 11
+  Best Time: 11
+  Best Player: Bob
+  XXX Pool: 6 tokens
+Player Alice:
+  MATIC Wallet: 1000
+  XXX Wallet: 1
+  NFTs Owned: 0
+  Times on Maps: Map 1: [262, 146, 236, 223]
+Player Bob:
+  MATIC Wallet: 1200
+  XXX Wallet: 3
+  NFTs Owned: 0
+  Times on Maps: Map 1: [85, 11]

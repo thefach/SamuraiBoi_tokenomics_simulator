@@ -62,12 +62,12 @@ Player Nick:
   MATIC Wallet: 209.42318675042833
   XXX Wallet: 77.59163829663316
   NFTs Owned: 1
-  Challenge Time: Not set
+  Times on Maps: No times recorded
 Player Bob:
   MATIC Wallet: 104.73534308611005
   XXX Wallet: 85.68464869186047
   NFTs Owned: 0
-  Challenge Time: Not set
+  Times on Maps: No times recorded
 ######################################
 
 current XXX price:2.2050033992616385 
@@ -78,7 +78,7 @@ Player Miriam:
   MATIC Wallet: 904.7472452211467
   XXX Wallet: 38.048922539312755
   NFTs Owned: 0
-  Challenge Time: Not set
+  Times on Maps: No times recorded
 Miriam sold 38.04 XXX tokens for 17.251674084828156 MATIC.
 
 current XXX price:2.184094578342126 
@@ -89,4 +89,4 @@ Player Miriam:
   MATIC Wallet: 921.9989193059749
   XXX Wallet: 0.008922539312756328
   NFTs Owned: 0
-  Challenge Time: Not set
+  Times on Maps: No times recorded
