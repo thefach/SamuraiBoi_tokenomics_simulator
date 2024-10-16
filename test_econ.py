@@ -11,8 +11,8 @@ with open('output.txt', 'w') as f:
     def print_lp_status(liqpool):
 
         print("\ncurrent XXX price:{} ".format(liqpool.get_xxx_price()))
-        print("current MATIC ammount:{} ".format(liqpool.get_matic_ammount()))
-        print("current XXX ammount:{} \n".format(liqpool.get_xxx_ammount()))
+        print("current MATIC amount:{} ".format(liqpool.get_matic_ammount()))
+        print("current XXX amount:{} \n".format(liqpool.get_xxx_ammount()))
 
 
     # Create a liquidity pool with initial reserves
@@ -55,12 +55,14 @@ with open('output.txt', 'w') as f:
 
     print(player1)
     print(player2)
+    print("######################################")
+    print_lp_status(lp)
     print(player3)
-    
-    # Your script or code that prints to console
-    print("This will be written in the output.txt file")
-    print("Another line in the text file")
-    
+    player3.sell_xxx(liquidity_pool=lp, xxx_amount=38.04)  
+    print_lp_status(lp)
+    print(player3)
+
+
 # Reset stdout back to its original state (if needed for further printing to console)
 sys.stdout = sys.__stdout__
 

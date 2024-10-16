@@ -62,3 +62,5 @@ class Player:
                 print(f"{self.name} does not have enough MATIC to mint an NFT.")
         else:
             print(f"{self.name} does not have enough MATIC to mint an NFT.")
+
+

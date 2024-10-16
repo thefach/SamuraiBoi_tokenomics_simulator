@@ -1,62 +1,62 @@
 
 current XXX price:2.0 
-current MATIC ammount:10000 
-current XXX ammount:5000 
+current MATIC amount:10000 
+current XXX amount:5000 
 
 Nick bought 50.0 XXX tokens for 100 MATIC.
 
 current XXX price:2.04040404040404 
-current MATIC ammount:10100 
-current XXX ammount:4950.0 
+current MATIC amount:10100 
+current XXX amount:4950.0 
 
 Bob bought 49.00990099009901 XXX tokens for 100 MATIC.
 
 current XXX price:2.081212121212121 
-current MATIC ammount:10200 
-current XXX ammount:4900.990099009901 
+current MATIC amount:10200 
+current XXX amount:4900.990099009901 
 
 Miriam bought 48.048922539312755 XXX tokens for 100 MATIC.
 Nick sold 20 XXX tokens for 9.423186750428327 MATIC.
 
 current XXX price:2.1117794039744413 
-current MATIC ammount:10290.576813249572 
-current XXX ammount:4872.941176470588 
+current MATIC amount:10290.576813249572 
+current XXX amount:4872.941176470588 
 
 Bob sold 10 XXX tokens for 4.7353430861100625 MATIC.
 
 current XXX price:2.1064848210188996 
-current MATIC ammount:10285.841470163463 
-current XXX ammount:4882.941176470588 
+current MATIC amount:10285.841470163463 
+current XXX amount:4882.941176470588 
 
 Miriam sold 10 XXX tokens for 4.7472452211466845 MATIC.
 
 current XXX price:2.1012094472712115 
-current MATIC ammount:10281.094224942317 
-current XXX ammount:4892.941176470588 
+current MATIC amount:10281.094224942317 
+current XXX amount:4892.941176470588 
 
 Nick bought 47.59163829663317 XXX tokens for 100 MATIC.
 
 current XXX price:2.1424861391639856 
-current MATIC ammount:10381.094224942317 
-current XXX ammount:4845.349538173955 
+current MATIC amount:10381.094224942317 
+current XXX amount:4845.349538173955 
 
 Bob bought 46.674747701761454 XXX tokens for 100 MATIC.
 
 current XXX price:2.184164312562421 
-current MATIC ammount:10481.094224942317 
-current XXX ammount:4798.674790472193 
+current MATIC amount:10481.094224942317 
+current XXX amount:4798.674790472193 
 
 Nick minted an NFT for 100 MATIC.
 
 current XXX price:2.2050033992616385 
-current MATIC ammount:10581.094224942317 
-current XXX ammount:4798.674790472193 
+current MATIC amount:10581.094224942317 
+current XXX amount:4798.674790472193 
 
 Bob does not have enough MATIC to mint an NFT.
 
 current XXX price:2.2050033992616385 
-current MATIC ammount:10581.094224942317 
-current XXX ammount:4798.674790472193 
+current MATIC amount:10581.094224942317 
+current XXX amount:4798.674790472193 
 
 Player Nick:
   MATIC Wallet: 209.42318675042833
@@ -68,10 +68,25 @@ Player Bob:
   XXX Wallet: 85.68464869186047
   NFTs Owned: 0
   Challenge Time: Not set
+######################################
+
+current XXX price:2.2050033992616385 
+current MATIC amount:10581.094224942317 
+current XXX amount:4798.674790472193 
+
 Player Miriam:
   MATIC Wallet: 904.7472452211467
   XXX Wallet: 38.048922539312755
   NFTs Owned: 0
   Challenge Time: Not set
-This will be written in the output.txt file
-Another line in the text file
+Miriam sold 38.04 XXX tokens for 17.251674084828156 MATIC.
+
+current XXX price:2.184094578342126 
+current MATIC amount:10563.84255085749 
+current XXX amount:4836.714790472193 
+
+Player Miriam:
+  MATIC Wallet: 921.9989193059749
+  XXX Wallet: 0.008922539312756328
+  NFTs Owned: 0
+  Challenge Time: Not set

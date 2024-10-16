@@ -1,0 +1,13 @@
+Game Actions
+
+tutto
+
+
+Economic Actions
+
+# aggiungere interaction with LP (Provide liquidity and remove liquidity)
+# aggiungere le fee di transazione e distribuzione fee ai liquidity providers
+# (spiegazione) liquidity pool providers danno Matic e XXX in ugual valore all LP, la LP ritorna un
+ token ricevuta (XXX_MATIC_pool) utilizzato per calcolare le share della LP e la conseguente
+ distribuzione delle fee (daily, weekly, monthly)
+
