@@ -1,7 +1,7 @@
 Game Actions
 
-tutto
-
+# DONE! add dev wallet per la gente che minta NFT
+# DONE! add tutte le vlte che un tipo paga 1 in XXX per giocare, deve pagare anche le fee di sistema in MATIC a POLIGON (google polingon average fee 0.0005)
 
 Economic Actions
 
