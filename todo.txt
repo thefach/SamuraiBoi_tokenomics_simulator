@@ -3,6 +3,8 @@ Game Actions
 # DONE! add dev wallet per la gente che minta NFT
 # DONE! add tutte le vlte che un tipo paga 1 in XXX per giocare, deve pagare anche le fee di sistema in MATIC a POLIGON (google polingon average fee 0.0005)
 
+# map is daleted from mapregistry when expires 
+
 Economic Actions
 
 # aggiungere interaction with LP (Provide liquidity and remove liquidity)
@@ -10,4 +12,16 @@ Economic Actions
 # (spiegazione) liquidity pool providers danno Matic e XXX in ugual valore all LP, la LP ritorna un
  token ricevuta (XXX_MATIC_pool) utilizzato per calcolare le share della LP e la conseguente
  distribuzione delle fee (daily, weekly, monthly)
+
+
+!!!!!!!! important notes !!!!!!!!!!
+
+player.create_map method is now deprec. 
+to create a map, is used 
+
+map_registry.register_map(map_id=101, difficulty="Medium", expiration_days=14, creator_id=1, locked_nfts=3)
+map1 = map_registry.get_map(101)
+
+player.create_map to be fixed
+
 

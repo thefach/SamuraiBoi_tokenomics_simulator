@@ -1,7 +1,10 @@
 class Map:
-    def __init__(self, map_id, difficulty):
+    def __init__(self, map_id, difficulty, expiration_days, creator_id, locked_nfts):
         self.map_id = map_id
-        self.difficulty = difficulty  # Could be a factor affecting time or reward
+        self.difficulty = difficulty  # Difficulty level of the map
+        self.creator_id = creator_id  # Player ID of the creator
+        self.expiration_days = expiration_days  # Number of days until map expires
+        self.locked_nfts = locked_nfts  # Number of NFTs locked in the map by the creator
         self.player_times = {}  # Dictionary to store {player_id: best_time}
         self.best_time = None  # Overall best time on the map
         self.best_player = None  # Player with the overall best time
@@ -11,7 +14,10 @@ class Map:
         """Display map details."""
         player_times_str = ', '.join([f"Player {pid}: {time}" for pid, time in self.player_times.items()]) or 'No players yet'
         return (f"Map {self.map_id}:\n"
+                f"  Created by Player ID: {self.creator_id}\n"
                 f"  Difficulty: {self.difficulty}\n"
+                f"  Expiration Days: {self.expiration_days}\n"
+                f"  Locked NFTs: {self.locked_nfts}\n"
                 f"  Player Times: {player_times_str}\n"
                 f"  Best Time: {self.best_time if self.best_time else 'No best time yet'}\n"
                 f"  Best Player: {self.best_player if self.best_player else 'No best player yet'}\n"
@@ -37,3 +43,31 @@ class Map:
         """Add XXX tokens to the map's pool when a player plays."""
         self.xxx_pool += amount
         print(f"Map {self.map_id} now has {self.xxx_pool} XXX tokens in the pool.")
+
+
+class MapRegistry:
+    def __init__(self):
+        self.maps = []  # List to store map records
+
+    def register_map(self, map_id, creator_id, creation_date, expiration_days):
+        """Register a newly created map."""
+        self.maps.append({
+            'map_id': map_id,
+            'creator_id': creator_id,
+            'creation_date': creation_date,
+            'expiration_days': expiration_days
+        })
+
+    def is_map_id_registered(self, map_id):
+        """Check if a map ID is already registered."""
+        return any(map_record['map_id'] == map_id for map_record in self.maps)
+
+    def __str__(self):
+        """Print details of all maps in the registry."""
+        if not self.maps:
+            return "No maps registered."
+        return '\n'.join([f"Map ID: {m['map_id']}, Creator ID: {m['creator_id']}, "
+                          f"Creation Date: {m['creation_date'].strftime('%Y-%m-%d')}, "
+                          f"Expiration Days: {m['expiration_days']}"
+                          for m in self.maps])
+

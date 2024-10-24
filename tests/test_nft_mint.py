@@ -1,6 +1,6 @@
 from systemfeedeposit import  SystemFeeDeposit
 from player import Player
-from map import  Map
+from maps_objects import  Map
 from devwallet import DevWallet
 
 # Create players, a map, a system fee deposit, and a dev wallet

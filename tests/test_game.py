@@ -1,4 +1,4 @@
-from map import  Map
+from maps_objects import  Map
 from player import Player
 
 import sys

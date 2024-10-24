@@ -1,4 +1,6 @@
 import random
+from datetime import datetime
+from maps_objects import  Map
 
 class Player:
     def __init__(self, player_id, name, initial_matic):
@@ -50,6 +52,35 @@ class Player:
         else:
             print(f"{self.name} does not have enough XXX tokens or MATIC to play on Map {game_map.map_id}.")
 
+    # def create_map(self, map_registry):
+    #     """Create a new map instance and register it, ensuring a unique map ID, and lock NFTs."""
+    #     if self.nfts < 1:
+    #         print(f"{self.name} does not have enough NFTs to create a map. At least 1 NFT is required.")
+    #         return None
+
+    #     # Generate a unique map ID
+    #     while True:
+    #         map_id = random.randint(1000, 9999)  # Random map ID
+    #         if not map_registry.is_map_id_registered(map_id):
+    #             break
+
+    #     # Lock a random number of NFTs between 1 and the number of NFTs the player owns
+    #     nfts_to_lock = random.randint(1, self.nfts)
+    #     self.nfts -= nfts_to_lock  # Deduct locked NFTs from the player's wallet
+
+    #     difficulty = random.choice(["Easy", "Medium", "Hard"])  # Random difficulty
+    #     expiration_days = random.randint(7, 30)  # Random expiration days between 7 and 30
+
+    #     new_map = Map(map_id=map_id, difficulty=difficulty, expiration_days=expiration_days,
+    #                   creator_id=self.player_id, locked_nfts=nfts_to_lock)
+
+    #     # Register the new map
+    #     map_registry.register_map(map_id, self.player_id, datetime.now(), expiration_days, nfts_to_lock)
+
+    #     print(f"{self.name} created Map {map_id} with difficulty '{difficulty}', expiration in {expiration_days} days, "
+    #           f"and locked {nfts_to_lock} NFTs.")
+    #     return new_map
+
     # Economic actions
 
     def update_wallet(self, token_type, amount):
@@ -58,6 +89,7 @@ class Player:
             self.matic_wallet += amount
         elif token_type == 'XXX':
             self.xxx_wallet += amount
+
 
     def buy_xxx(self, liquidity_pool, matic_amount):
         """Buy XXX tokens by spending MATIC through the liquidity pool."""
@@ -96,3 +128,24 @@ class Player:
             print(f"{self.name} does not have enough MATIC to mint an NFT.")
 
 
+class PlayerRegistry:
+    def __init__(self):
+        self.players = {}  # Dictionary to store player instances by player ID
+
+    def register_player(self, player_id, name, initial_matic):
+        """Register a new player and store their instance by player ID."""
+        if player_id not in self.players:
+            player = Player(player_id, name, initial_matic)
+            self.players[player_id] = player
+            print(f"Player {name} with ID {player_id} has been registered.")
+        else:
+            print(f"Player with ID {player_id} already exists.")
+
+    def get_player(self, player_id):
+        """Retrieve a player instance by their ID."""
+        return self.players.get(player_id, None)
+
+    def __str__(self):
+        if not self.players:
+            return "No players registered."
+        return '\n'.join([str(player) for player in self.players.values()])

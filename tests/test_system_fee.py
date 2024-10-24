@@ -1,6 +1,6 @@
 from systemfeedeposit import  SystemFeeDeposit
 from player import Player
-from map import  Map
+from maps_objects import  Map
 
 # Create players, a map, and a system fee deposit
 alice = Player(player_id=1, name="Alice", initial_matic=1000)
