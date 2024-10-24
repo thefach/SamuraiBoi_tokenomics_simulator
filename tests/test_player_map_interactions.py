@@ -1,4 +1,4 @@
-from player import Player
+from player_objects import Player
 from maps_objects import  MapRegistry
 
 # Create players and a map registry

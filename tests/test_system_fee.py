@@ -1,5 +1,5 @@
 from systemfeedeposit import  SystemFeeDeposit
-from player import Player
+from player_objects import Player
 from maps_objects import  Map
 
 # Create players, a map, and a system fee deposit

@@ -1,7 +1,7 @@
-from player import Player
+from player_objects import Player
 from maps_objects import  MapRegistry
 from systemfeedeposit import  SystemFeeDeposit
-from player import PlayerRegistry
+from player_objects import PlayerRegistry
 from datetime import datetime, timedelta
 
 

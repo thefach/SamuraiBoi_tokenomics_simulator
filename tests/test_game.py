@@ -1,5 +1,5 @@
 from maps_objects import  Map
-from player import Player
+from player_objects import Player
 
 import sys
 
